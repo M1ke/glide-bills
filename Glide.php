@@ -1,7 +1,7 @@
 <?php
 
 class Glide {
-	protected $url='https://www.glide.uk.com/api/4.0/';
+	protected $url='https://glide.co.uk/api/4.0/';
 	protected $methods=array('frontEnd'=>array(
 	),'portal'=>array(
 	),'signUp'=>array(
