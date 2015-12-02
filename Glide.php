@@ -99,8 +99,14 @@ class Glide {
 		if (!isset($data['tenants']) or !is_numeric($data['tenants'])){
 			$errors['tenants']='You must enter a valid number of tenants.';
 		}
+		else {
+			$data['tenants'] = (int) $data['tenants'];
+		}
 		if (!isset($data['term']) or !is_numeric($data['term'])){
 			$errors['term']='You must enter a valid contract term.';
+		}
+		else {
+			$data['term'] = (int) $data['term'];
 		}
 		return $data;
 	}
@@ -201,7 +207,6 @@ class Glide {
 	private function service_name($service){
 		return $this->service_names[$service] || ucfirst($service);
 	}
-
 
 	/* Utility functions */
 
